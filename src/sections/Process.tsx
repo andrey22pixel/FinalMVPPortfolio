@@ -37,7 +37,7 @@ function StepHead({ n, title, timing, desc }: { n: string; title: string; timing
   )
 }
 
-const card = 'rounded-[28px] bg-[#f9fafb] p-[32px] transition-[transform,box-shadow] duration-500 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(10,10,10,0.25)]'
+const card = 'rounded-[24px] bg-[#f9fafb] p-6 sm:rounded-[28px] sm:p-[32px] transition-[transform,box-shadow] duration-500 hover:-translate-y-1 hover:shadow-[0_18px_40px_-20px_rgba(10,10,10,0.25)]'
 
 export default function Process() {
   return (
@@ -64,10 +64,11 @@ export default function Process() {
       </div>
 
       <div className="flex w-full flex-col items-stretch gap-[16px] xl:flex-row">
-        <div className="flex min-w-px flex-1 flex-col gap-[16px]">
-          <div className="flex w-full flex-col gap-[16px] md:flex-row">
+        {/* Below xl the column wrapper dissolves so steps can be ordered 01, 02, 03, 04. */}
+        <div className="contents xl:flex xl:min-w-px xl:flex-1 xl:flex-col xl:gap-[16px]">
+          <div className="order-1 flex w-full flex-col gap-[16px] md:flex-row xl:order-none">
             <Reveal y={40} className="flex min-w-px flex-1">
-              <div className={`${card} flex min-h-[390px] w-full flex-col items-start justify-between gap-6`}>
+              <div className={`${card} flex w-full flex-col items-start justify-between gap-6 md:min-h-[390px]`}>
                 <StepHead n="01" title="Discover" timing="1 week" desc="Understand business goals, users, and technical constraints through audits and stakeholder talks." />
                 <div className="flex flex-wrap items-start gap-[8px]">
                   <Pill>Interviews</Pill>
@@ -80,7 +81,7 @@ export default function Process() {
               </div>
             </Reveal>
             <Reveal y={40} delay={0.1} className="flex min-w-px flex-1">
-              <div className={`${card} flex min-h-[390px] w-full flex-col items-start justify-between gap-6`}>
+              <div className={`${card} flex w-full flex-col items-start justify-between gap-6 md:min-h-[390px]`}>
                 <StepHead n="02" title="Define" timing="1 week" desc="Frame the problem, map user flows, and agree on success metrics before touching pixels." />
                 <div className="flex items-center gap-[8px]">
                   {['Goal', 'Flow', 'Metric'].map((s, i) => (
@@ -104,8 +105,8 @@ export default function Process() {
               </div>
             </Reveal>
           </div>
-          <Reveal y={40} delay={0.15} className="w-full">
-            <div className={`${card} flex min-h-[300px] w-full flex-col items-start gap-[32px] md:flex-row md:items-center md:gap-[56px]`}>
+          <Reveal y={40} delay={0.15} className="order-3 w-full xl:order-none">
+            <div className={`${card} flex w-full flex-col items-start gap-[24px] md:min-h-[300px] md:flex-row md:items-center md:gap-[56px]`}>
               <div className="w-full min-w-px md:flex-1">
                 <StepHead n="04" title="Deliver" timing="Ongoing" desc="Developer handoff, design QA during build, then measure results and iterate." />
               </div>
@@ -123,8 +124,8 @@ export default function Process() {
           </Reveal>
         </div>
 
-        <Reveal y={40} delay={0.2} className="flex w-full shrink-0 xl:w-[480px]">
-          <div className="group flex w-full flex-col items-start justify-between gap-8 rounded-[28px] bg-[#0a0a0a] p-[36px]">
+        <Reveal y={40} delay={0.2} className="order-2 flex w-full shrink-0 xl:order-none xl:w-[480px]">
+          <div className="group flex w-full flex-col items-start justify-between gap-8 rounded-[24px] bg-[#0a0a0a] p-6 sm:rounded-[28px] sm:p-[36px]">
             <div className="flex w-full flex-col items-start gap-[12px]">
               <div className="flex w-full items-center justify-between">
                 <p className="font-['Instrument_Serif:Italic'] text-[72px] italic leading-[0.9] tracking-[-1.44px] whitespace-nowrap text-white">03</p>
@@ -135,7 +136,7 @@ export default function Process() {
                 Wireframes to hi-fi, interactive prototypes, and usability testing with real users.
               </p>
             </div>
-            <div className="flex w-full items-center justify-center gap-[20px] rounded-[22px] bg-[rgba(255,255,255,0.05)] p-[28px]">
+            <div className="flex w-full items-center justify-center gap-[20px] rounded-[22px] bg-[rgba(255,255,255,0.05)] p-5 max-sm:[zoom:0.82] sm:p-[28px]">
               <div className="relative h-[220px] w-[124px] shrink-0 overflow-clip rounded-[20px] border border-dashed border-[rgba(255,255,255,0.4)] transition-transform duration-500 group-hover:-rotate-3">
                 <div className="absolute top-[17px] left-[13px] h-[10px] w-[60px] rounded-[5px] bg-[rgba(255,255,255,0.25)]" />
                 <div className="absolute top-[39px] left-[13px] h-[72px] w-[96px] rounded-[12px] bg-[rgba(255,255,255,0.12)]" />

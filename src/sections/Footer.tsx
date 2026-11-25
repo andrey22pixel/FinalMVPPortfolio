@@ -16,7 +16,7 @@ export default function Footer() {
           height={1120}
           loading="lazy"
           decoding="async"
-          className="pointer-events-none absolute top-[8%] right-0 -z-10 w-[min(1000px,90%)] opacity-[0.22] select-none [mask-image:linear-gradient(to_right,transparent,black_35%)]"
+          className="pointer-events-none absolute right-0 bottom-0 -z-10 w-full opacity-[0.14] sm:top-[8%] sm:bottom-auto sm:w-[min(1000px,90%)] sm:opacity-[0.22] select-none [mask-image:linear-gradient(to_right,transparent,black_35%)]"
         />
         <div className="flex w-full flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
           <div className="flex items-center gap-[4px] rounded-[5px] bg-white px-[8px] py-[3px] shadow-[0px_4px_4px_0px_rgba(23,23,23,0.04)]">

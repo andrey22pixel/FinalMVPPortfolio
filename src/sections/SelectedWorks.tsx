@@ -101,17 +101,17 @@ export default function SelectedWorks() {
                 <p className="font-['DM_Mono:Regular'] text-[13px] leading-[20px] whitespace-nowrap text-white not-italic">{`${String(i + 1).padStart(2, '0')} / 03`}</p>
               </div>
             </div>
-            <div className="flex w-full items-end justify-between gap-4">
-              <div className="flex min-w-px flex-1 flex-col items-start gap-[8px]">
-                <h3 className="font-['Geist:Medium'] text-[clamp(26px,2.4vw,32px)] font-medium leading-[36px] tracking-[-0.96px] text-[#0a0a0b]">{w.title}</h3>
-                <p className="w-full font-['Archivo:Regular'] text-[16px] font-normal leading-[28px] text-[#737880]" style={wdth}>
+            <div className="grid w-full grid-cols-[1fr_auto] items-center gap-x-4 gap-y-[8px] sm:items-end">
+              <div className="contents sm:flex sm:min-w-px sm:flex-col sm:items-start sm:gap-[8px]">
+                <h3 className="col-start-1 row-start-1 font-['Geist:Medium'] text-[clamp(26px,2.4vw,32px)] font-medium leading-[36px] tracking-[-0.96px] text-[#0a0a0b]">{w.title}</h3>
+                <p className="col-span-2 row-start-2 w-full font-['Archivo:Regular'] text-[16px] font-normal leading-[26px] text-[#737880] sm:leading-[28px]" style={wdth}>
                   {w.desc}
                 </p>
               </div>
               <a
                 href="#works"
                 onClick={(e) => e.preventDefault()}
-                className="group/btn flex shrink-0 items-center gap-[8px] rounded-[100px] bg-[#0a0a0b] py-[13px] pr-[18px] pl-[22px] transition-colors hover:bg-[#2a2a2a]"
+                className="group/btn col-start-2 row-start-1 flex shrink-0 items-center sm:row-span-2 sm:self-end gap-[8px] rounded-[100px] bg-[#0a0a0b] py-[13px] pr-[18px] pl-[22px] transition-colors hover:bg-[#2a2a2a]"
               >
                 <span className="font-['Archivo:Medium'] text-[15px] font-medium leading-[22px] whitespace-nowrap text-white" style={wdth}>
                   View

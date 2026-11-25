@@ -20,7 +20,7 @@ export default function Collage() {
     <section
       id="gallery"
       aria-label="Product screens"
-      className="relative w-full max-w-[1440px] scroll-mt-4 overflow-clip bg-white py-[40px] [--u:0.5px] sm:[--u:0.72px] lg:[--u:1px]"
+      className="relative w-full max-w-[1440px] scroll-mt-4 overflow-clip bg-white py-[40px] [--u:0.6px] sm:[--u:0.72px] lg:[--u:1px] [--fade:32px] sm:[--fade:calc(var(--u)*220)]"
     >
       <div className="relative w-full" style={{ height: 'calc(var(--u) * 1682)' }}>
         {rows.map((row, ri) => {
@@ -32,7 +32,7 @@ export default function Collage() {
               style={{ top: `calc(var(--u) * ${row.top})`, left: `calc(var(--u) * ${row.start})` }}
               initial={{ opacity: 0, x: row.dir === 'left' ? 60 : -60 }}
               whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, margin: '0px 0px -12% 0px' }}
               transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
             >
               {/* Two identical copies; translating by -50% loops seamlessly. */}
@@ -62,8 +62,8 @@ export default function Collage() {
           )
         })}
       </div>
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 bg-gradient-to-r from-white to-[rgba(255,255,255,0)]" style={{ width: 'calc(var(--u) * 220)' }} />
-      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 bg-gradient-to-r from-[rgba(255,255,255,0)] to-white" style={{ width: 'calc(var(--u) * 220)' }} />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 left-0 bg-gradient-to-r from-white to-[rgba(255,255,255,0)]" style={{ width: 'var(--fade)' }} />
+      <div aria-hidden className="pointer-events-none absolute inset-y-0 right-0 bg-gradient-to-r from-[rgba(255,255,255,0)] to-white" style={{ width: 'var(--fade)' }} />
     </section>
   )
 }

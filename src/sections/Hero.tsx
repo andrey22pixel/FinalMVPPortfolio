@@ -134,7 +134,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 32, rotate: 1.5 }}
           animate={{ opacity: 1, y: 0, rotate: 0 }}
           transition={{ duration: 1, delay: 0.2, ease }}
-          className="relative mx-auto h-[557px] w-full max-w-[468px] shrink-0 lg:mx-0 lg:w-[468px]"
+          className="relative mx-auto h-[530px] w-full max-[419px]:[zoom:0.86] sm:h-[557px] max-w-[468px] shrink-0 lg:mx-0 lg:w-[468px]"
         >
           <div className="absolute top-[30px] right-1/2 h-[481px] w-[364px] translate-x-1/2 sm:right-0 sm:translate-x-0">
             <div className="absolute top-[calc(50%-0.28px)] left-[calc(50%-0.11px)] h-[481.08px] w-[363.521px] -translate-x-1/2 -translate-y-1/2 overflow-clip rounded-[30.366px] bg-black shadow-[8.242px_10.845px_19.087px_0px_rgba(0,0,0,0.25)]">
@@ -202,7 +202,7 @@ export default function Hero() {
         <p className="font-['Archivo:Regular'] text-[14px] font-normal leading-[18px] whitespace-nowrap text-[#6b6b6b]" style={wdth}>
           Helping 2000+ marketing teams grow
         </p>
-        <div className="flex w-full flex-wrap items-center justify-center gap-x-[48px] gap-y-[20px]">
+        <div className="flex w-full flex-wrap items-center justify-center gap-x-[32px] gap-y-[20px] sm:gap-x-[48px]">
           <div className="h-[18.4px] w-[41.7px] shrink-0 overflow-clip opacity-70 transition-opacity hover:opacity-100">
             <div className="relative -mt-[3.24px] -ml-[3.63px] h-[24.925px] w-[49.02px] overflow-clip">
               <img alt="" className="absolute inset-0 block size-full max-w-none" src={`${A}/72f46.svg`} />
