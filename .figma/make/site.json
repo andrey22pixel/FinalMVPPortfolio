@@ -1,0 +1,10 @@
+{
+  "description": "Optimize images to WebP, improve page load speed, and add lazy-loaded sections with simple interactions for faster, smoother websites.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}

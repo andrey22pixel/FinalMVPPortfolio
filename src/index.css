@@ -1,0 +1,40 @@
+@import './fonts.css';
+@import 'tailwindcss';
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+}
+
+/* Gallery marquee: slow, seamless left/right loop (pauses on hover). */
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.marquee-track {
+  animation: marquee 80s linear infinite;
+  will-change: transform;
+}
+.marquee-track[data-dir='right'] {
+  animation-direction: reverse;
+}
+.marquee-row:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
